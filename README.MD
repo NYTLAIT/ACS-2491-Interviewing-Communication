@@ -31,5 +31,5 @@ We could simple look for each multiple of k in nums. Since nums is an array, it 
 Note that k could only have one possible multiple if k > 50 as they would hit the nums[i] <= 100 constraint on the second smallest multiple.
 Also note that the number of multiples decreases exponentially with a steep drop from 100 possible multiples to 50 to 33 to 25 and so forth -- would this function be used consecutively or is it a one off thing?
 I would settle for that solution as I would imagine you would always have to loop through the multiples of k making all solutions O(n) but it would be benefitial to have an early return.
-
+So I would use a for loop to check the multiples of k in order and match it to a number in the array. If there is no match, return the multiple of k.
 ## QUESTION 2 ##
