@@ -1,6 +1,9 @@
-# 
+# Purpose #
+Practice for interviews by answering leetcode questions by restating, asking clarifications, stating assumptions, and thinking out loud before actually coding.
 
 ## QUESTION 1 ##
+https://leetcode.com/problems/smallest-missing-multiple-of-k/description/?envType=daily-question&envId=2026-08-25
+
 Question given: Given an integer array nums and an integer k, return the smallest positive multiple of k that is missing from nums.
 
 Restate: I'll be given an array and of integers and I am to find the value that matches the smallest postive multiple of the given k that isnt in the list.
@@ -32,4 +35,36 @@ Note that k could only have one possible multiple if k > 50 as they would hit th
 Also note that the number of multiples decreases exponentially with a steep drop from 100 possible multiples to 50 to 33 to 25 and so forth -- would this function be used consecutively or is it a one off thing?
 I would settle for that solution as I would imagine you would always have to loop through the multiples of k making all solutions O(n) but it would be benefitial to have an early return.
 So I would use a for loop to check the multiples of k in order and match it to a number in the array. If there is no match, return the multiple of k.
+
+For improvements I would safeguard the arguements.
+
 ## QUESTION 2 ##
+https://leetcode.com/problems/palindrome-number/description/
+
+Question given: Given an integer x, return true if x is a palindrome, and false otherwise.
+
+Restating: I am to see if a given integer x can be reversed in order and still be the same like race car turns into rac ecar (without the space). 
+
+Questions:
+1. Is there a range for the integers?
+2. Does the negative count?
+3. Do you have a preference of how I solve it or constraints?
+4. Is there anything in writing the code that you would like for me to prioritize?
+5. What language would you like it in?
+
+Constraints given:
+- -231 <= x <= 231 - 1
+- Negatives do count
+Challenge given:
+- Could you solve it without converting the integer to a string?
+
+Assumptions:
+- Which language does not matter
+- I assume the challenge given is the priority
+
+Thinking Out Loud:
+I believe slicing does not work on integers but if it did I would use slicing to reverse the order with [::-1].
+Splitting into a list would also turn the integer into strings.
+We might be able to get each digit by moving decimal points and flooring to get a digit and then subtracting it and then repeat but we would need to know how. We could use Math.floor and log10 to find how many digits, then a for loop to multiple 10 with the digit count (decreasing by 1 each loop), and divide the integer given by that number to make it so that say 464611 becomes 4.64611 to get 4 and store it in a list. Then we subtract 400000 from the original and repeat. This would definitely not be efficient but we wouldnt have to turn it into a string.
+Note, imediately return false for negatives
+
