@@ -65,6 +65,9 @@ Assumptions:
 Thinking Out Loud:
 I believe slicing does not work on integers but if it did I would use slicing to reverse the order with [::-1].
 Splitting into a list would also turn the integer into strings.
-We might be able to get each digit by moving decimal points and flooring to get a digit and then subtracting it and then repeat but we would need to know how. We could use Math.floor and log10 to find how many digits, then a for loop to multiple 10 with the digit count (decreasing by 1 each loop), and divide the integer given by that number to make it so that say 464611 becomes 4.64611 to get 4 and store it in a list. Then we subtract 400000 from the original and repeat. This would definitely not be efficient but we wouldnt have to turn it into a string.
-Note, imediately return false for negatives
+We might be able to get each digit by moving decimal points and flooring to get a digit and then subtracting it and then repeat but we would need to know how. We could use Math.floor and log10 to find how many times 10 must be raised to equal the digit of the numbers, then a for loop to raise 10 with the power count (decreasing by 1 each loop), and divide the integer given by that number to make it so that say 464611 becomes 4.64611 to get 4 and store it in a list. Then we subtract 400000 from the original and repeat. This would definitely not be efficient but we wouldnt have to turn it into a string.
+Note, imediately return false for negatives.
+
+Additional questions:
+Do you want to do anything else with the number or any other variables after seeing my code?
 
